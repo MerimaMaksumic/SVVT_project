@@ -1,0 +1,22 @@
+{
+    "url": {
+        "home_page": "https://buybook.ba/index.php"
+    },
+    "data":{
+        "firstName":"Elma Sarajlic",
+        "email": "elma.sarajlic@stu.ibu.edu.ba",
+        "phone": "0603305067",
+        "password": "12345678",
+        "repeatedpassword": "12345678"
+    },
+    "credentials": {
+        "name": "Amila",
+        "last_name": "Causevic",
+        "password": "password123"
+    },
+    "verification_message": {
+        "registartion_message": "Your account has been created."
+    }
+    
+
+}
