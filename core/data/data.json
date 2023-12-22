@@ -9,6 +9,13 @@
         "password": "12345678",
         "repeatedpassword": "12345678"
     },
+    "data2":{
+       
+        "email": "elma.sarajlic@stu.ibu.edu.ba",
+    
+        "password": "12345678"
+   
+    },
     "credentials": {
         "name": "Amila",
         "last_name": "Causevic",
