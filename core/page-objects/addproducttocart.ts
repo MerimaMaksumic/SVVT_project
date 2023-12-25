@@ -31,40 +31,16 @@ export class AddProduct extends BasePage {
         await this.findElementAndClickEnsuringVisible(this.addtocartBtn);
     }
 
-    private firstName: By = By.id("name_1");
+   
+    private CartBtn: By= By.xpath("//a [@data-bs-toggle='modal']");
+    async clickCartBtn(driver){
+        let element = await driver.findElement(this.CartBtn);
+        await driver.executeScript("arguments[0].scrollIntoView(true);", element);
+        await driver.wait(until.elementIsEnabled(element), 10000);
 
-    async provideFirstName(){
-        await this.fillInputField(this.firstName, testData.data.firstName);
+        // Using JavaScript to perform the click
+        await driver.executeScript("arguments[0].click();", element);
     }
 
-  private email: By = By.xpath("//input [@placeholder='Vaša e-mail adresa']");
 
-  async provideEmail(){
-        await this.fillInputField(this.email, testData.data.email);
-    }
-
-    private phone: By = By.xpath("//input [@placeholder='Vaš broj telefona']");
-    async providePhone(){
-        await this.fillInputField(this.phone, testData.data.phone);
-    }
-
-    private password: By = By.id("exampleInputPassword_01");
-    async providePassword(){
-        await this.fillInputField(this.password, testData.data.password);
-    }
-
-    private repeatPassword: By = By.xpath("//input [@name='password2']");
-    async provideRepeatPassword(){
-        await this.fillInputField(this.repeatPassword, testData.data.password);
-    }
-
-    private checkBox: By = By.id("form2Example3");
-    async clickCheckBox(){
-        await this.findElementAndClick(this.checkBox);
-    }
-
-    private SumbitBtn: By = By.xpath("//button [@name='kayit']");
-    async clickSumbitBtn(){
-        await this.findElementAndClick(this.SumbitBtn);
-    }
 }

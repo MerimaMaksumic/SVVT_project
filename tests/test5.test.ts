@@ -21,8 +21,13 @@ test("addtocart: add product to cart", async () =>
    addProduct = new AddProduct(driver); // Instantiate the RegistrationPage object
    // timeout 
     await new Promise((resolve) => setTimeout(resolve, 5000));
-    await addProduct.clickProduct(); // Call the clickUserButton method on the object
-    // await addProduct.addtoCartButton();
+    await addProduct.clickProduct(); 
+    await addProduct.addtoCartButton();
+    //timeout
+    await new Promise((resolve) => setTimeout(resolve, 50000));
+    await addProduct.clickCartBtn(driver);
+    await new Promise((resolve) => setTimeout(resolve, 50000));
+
 }, 
 1000000);
   
