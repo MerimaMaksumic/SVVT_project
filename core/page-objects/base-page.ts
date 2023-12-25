@@ -45,5 +45,18 @@ export default class BasePage {
         await (await this.findElement(inputField)).sendKeys(text);
     }
 
+    // to ensure there is no overlay on top of the element
+	async findElementAndEnsureVisible(selector: By) {
+        const element = await this.waitForElement(selector, 10000);
+        await this.driver.executeScript("arguments[0].scrollIntoView(true);", element);
+        await this.driver.sleep(1000); // sleep to ensure any overlays have time to disappear
+        return element;
+    }
+
+    async findElementAndClickEnsuringVisible(selector: By) {
+        const element = await this.findElementAndEnsureVisible(selector);
+        await this.hoverElement(element);
+        await element.click();
+    }
     
 }
