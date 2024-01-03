@@ -23,7 +23,7 @@ test("loginpage: user login", async () =>
     await loginPage.providePassword();
     await loginPage.clickSumbitBtn();
     await loginPage.clickUserButtonagain();
-    await new Promise((resolve) => setTimeout(resolve, 500000));
+    /*await new Promise((resolve) => setTimeout(resolve, 500000));*/
 }, 
 1000000);
   
@@ -32,4 +32,4 @@ test("loginpage: user login", async () =>
   
     await driver.quit();
   
-  }, 50000000);
+  }, 50000);
