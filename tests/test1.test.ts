@@ -11,6 +11,7 @@ beforeAll(async () => {
     driver = await new Builder().forBrowser("chrome").build();
     await driver.get(url);
     await driver.manage().window().maximize();
+    // registrationPage = new RegistrationPage(driver);
   }, 600000);
   
 test("registrationpage: user registration", async () => 

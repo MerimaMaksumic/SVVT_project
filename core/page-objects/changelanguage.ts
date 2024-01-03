@@ -19,21 +19,34 @@ try {
 
 
 export class ChangeLanguage extends BasePage {
-    constructor(driver: WebDriver) {
-        super(driver);
-    }
+  constructor(driver: WebDriver) {
+    super(driver);
+  }
 
-    private flagBtn: By = By.xpath("//div  [@class='dropdown mx-2 nav-item']");
+  private flagBtn: By = By.xpath("//div  [@class='dropdown mx-2 nav-item']");
 
 
-    async clickFlagButton(){
-        await this.findElementAndClick(this.flagBtn);
-    }
-   
-    private chosenBtn: By = By.xpath("//a [@href='https://buybook.ba/dil.php?dil=tr']");
+  async clickFlagButton() {
+    await this.findElementAndClick(this.flagBtn);
+  }
 
-    async clickChosenButton(){
-        await this.findElementAndClickEnsuringVisible(this.chosenBtn);
+  private chosenLanguage: By = By.xpath('//div[@class="dropdown-menu mt-2 shadow show"]//a[@href="https://buybook.ba/dil.php?dil=en"]');
 
-}
+  async clickChosenLanguage() {
+    await this.findElementAndClick(this.chosenLanguage);
+  }
+
+
+  private flagBtn2: By = By.xpath('//i[@class="bi bi-flag text-white"]');
+
+
+  async clickFlagButton2() {
+    await this.findElementAndClick(this.flagBtn);
+  }
+
+  private checklanguage = By.xpath('//div[@class="dropdown-menu mt-2 shadow show"]//a[@href="https://buybook.ba/dil.php?dil=en"]');
+
+  async comparechangelanguage() {
+    await this.checkMatchingElements(this.checklanguage, testData.data.language)
+  }
 }

@@ -58,5 +58,9 @@ export default class BasePage {
         await this.hoverElement(element);
         await element.click();
     }
+
+    async scrollToElement(element: WebElement): Promise<void> {
+        await this.driver.executeScript("arguments[0].scrollIntoView(true);", element);
+    }
     
 }

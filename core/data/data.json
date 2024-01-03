@@ -9,7 +9,10 @@
         "password": "12345678",
         "repeatedpassword": "12345678",
         "firstSearch": "Richard Osman",
-        "prijava":"Prijava korisnika"
+        "prijava":"Prijava korisnika",
+        "izdavac": "Buybook",
+        "language":"English",
+        "newPassword":"012345678"
     },
     "data2":{
        

@@ -11,7 +11,7 @@ beforeAll(async () => {
   driver = await new Builder().forBrowser("chrome").build();
   await driver.get(url);
   await driver.manage().window().maximize();
-}, 600000);
+}, 60000);
 
 test("search: user search", async () => {
   await driver.navigate().to(url);
@@ -26,8 +26,8 @@ test("search: user search", async () => {
   await new Promise((resolve) => setTimeout(resolve, 5000));
   await search.provideFirstSearchAndPressEnter();
 
-}, 1000000);
+}, 50000);
 
 afterAll(async () => {
   await driver.quit();
-}, 50000000);
+}, 50000);
