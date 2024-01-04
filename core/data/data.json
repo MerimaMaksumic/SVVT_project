@@ -1,6 +1,7 @@
 {
     "url": {
-        "home_page": "https://buybook.ba/index.php"
+        "home_page": "https://buybook.ba/index.php",
+        "homepage2": "https://www.instagram.com/ik_buybook/"
     },
     "data":{
         "firstName":"Elma Sarajlic",
@@ -12,6 +13,8 @@
         "prijava":"Prijava korisnika",
         "izdavac": "Buybook",
         "language":"English",
+        "cart": "Moja košara (1)",
+        "insta": "ik_buybook",
         "newPassword":"012345678"
     },
     "data2":{
