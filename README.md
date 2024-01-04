@@ -1,6 +1,6 @@
-# Software Verification, Validation and Testing
+# Software Verification, Validation and Testing - Project
 
-## Testing of Buybook Webpage
+## Testing of website
 
 The project/application being tested is the "BuyBook" website, a bookstore website designed for the purchase of books and some accessories.
 
