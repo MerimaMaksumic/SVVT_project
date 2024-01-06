@@ -19,91 +19,91 @@ export class ChangePassword extends BasePage {
 
     private usericon = By.xpath('//div[@class="nav-item"]//a[@href="https://buybook.ba/moj-nalog"]');
 
-    async clickusericon(){
-      await this.findElementAndClickEnsuringVisible(this.usericon);
+    async clickusericon() {
+        await this.findElementAndClickEnsuringVisible(this.usericon);
     }
 
     private emailinput = By.id("email_1");
 
-    async inputemail(){
+    async inputemail() {
         await this.fillInputField(this.emailinput, testData.data.email);
     }
 
     private passwordinput = By.id("exampleInputPassword01");
 
-    async inputpassword(){
+    async inputpassword() {
         await this.fillInputField(this.passwordinput, testData.data.password);
     }
 
     private prijavabutton = By.xpath('//button[@class="btn btn-primary w-100"]');
 
-    async clickprijava(){
+    async clickprijava() {
         await this.findElementAndClickEnsuringVisible(this.prijavabutton);
     }
 
     private usericonagain = By.xpath('//div[@class="nav-item"]//a[@href="https://buybook.ba/moj-nalog"]');
 
-    async clickusericonagain(){
-      await this.findElementAndClickEnsuringVisible(this.usericonagain);
+    async clickusericonagain() {
+        await this.findElementAndClickEnsuringVisible(this.usericonagain);
     }
 
     private lozinkabox = By.xpath('//h5[contains(text(), "Promijeni lozinsku")]');
 
-    async findlozinkabox(){
+    async findlozinkabox() {
         await this.findElement(this.lozinkabox);
     }
 
     private oldpasswordfield = By.id('current_password');
 
-    async filloldpasswordfield(){
+    async filloldpasswordfield() {
         await this.fillInputField(this.oldpasswordfield, testData.data.password);
     }
 
     private newpasswordfield = By.id('new-password');
 
-    async fillnewpasswordfield(){
+    async fillnewpasswordfield() {
         await this.fillInputField(this.newpasswordfield, testData.data.newPassword);
     }
 
     private newpasswordfield2 = By.id('confirm_password');
 
-    async fillnewpasswordfield2(){
+    async fillnewpasswordfield2() {
         await this.fillInputField(this.newpasswordfield2, testData.data.newPassword);
     }
 
     private confirmpasswordbutton = By.xpath('//button[@name="hesap"]');
 
-    async clickconfirmpasswordbutton(){
+    async clickconfirmpasswordbutton() {
         await this.findElementAndClickEnsuringVisible(this.confirmpasswordbutton);
     }
 
     private logout = By.xpath('//a[@href="logout.php"]');
 
-    async clicklogout(){
+    async clicklogout() {
         await this.findElementAndClickEnsuringVisible(this.logout);
     }
 
     private usericon3 = By.xpath('//div[@class="nav-item"]//a[@href="https://buybook.ba/moj-nalog"]');
 
-    async clickusericon3(){
+    async clickusericon3() {
         await this.findElementAndClickEnsuringVisible(this.usericon3);
     }
 
     private emailaddress2 = By.id("email_1");
-    
-    async enteremailaddress2(){
+
+    async enteremailaddress2() {
         await this.fillInputField(this.emailaddress2, testData.data.email);
     }
 
     private password2 = By.id("exampleInputPassword01");
 
-    async enterpassword2(){
+    async enterpassword2() {
         await this.fillInputField(this.password2, testData.data.newPassword);
     }
 
     private loginbutton2 = By.xpath('//button[@name="giris"]');
 
-    async clickloginbutton2(){
+    async clickloginbutton2() {
         await this.findElementAndClickEnsuringVisible(this.loginbutton2);
     }
 

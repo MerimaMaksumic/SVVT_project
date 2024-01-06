@@ -20,37 +20,37 @@ export class DeleteProduct extends BasePage {
     private productBtn: By = By.xpath('//a [@class="slick-slide slick-current slick-active"]//div[@class="productCustomCard d-flex flex-wrap align-items-center justify-content-center px-1"]');
 
 
-    async clickProduct(){
+    async clickProduct() {
         await this.findElementAndClickEnsuringVisible(this.productBtn);
     }
 
     private addtocartBtn: By = By.xpath("//div [@class='cart-button col-12 d-flex justify-content-start align-items-center gap-2']");
 
-    async addtoCartButton(){
+    async addtoCartButton() {
         await this.findElementAndClick(this.addtocartBtn);
     }
 
-    private CartBtn: By= By.xpath("//a [@data-bs-toggle='modal']");
+    private CartBtn: By = By.xpath("//a [@data-bs-toggle='modal']");
 
-    async clickcartbutton(){
+    async clickcartbutton() {
         await this.findElementAndClick(this.CartBtn);
     }
 
-    private xBtn: By= By.xpath("//a [@class='small text-dark ms-auto']");
+    private xBtn: By = By.xpath("//a [@class='small text-dark ms-auto']");
 
-    async clickXBtn(){
+    async clickXBtn() {
         await this.findElementAndClick(this.xBtn);
     }
 
-    private CartBtn2: By= By.xpath('//a[@href="javascript:void(0)"]//i[@class="bi bi-cart"]');
+    private CartBtn2: By = By.xpath('//a[@href="javascript:void(0)"]//i[@class="bi bi-cart"]');
 
-    async clickcartbutton2(){
+    async clickcartbutton2() {
         await this.findElementAndClick(this.CartBtn);
     }
 
-    private CartStatus: By= By.xpath('//h6[@class="m-0 fw-bold"]');
-    
-    async comparecartstatus(){
+    private CartStatus: By = By.xpath('//h6[@class="m-0 fw-bold"]');
+
+    async comparecartstatus() {
         await this.checkMatchingElements(this.CartStatus, testData.data.cart);
     }
 

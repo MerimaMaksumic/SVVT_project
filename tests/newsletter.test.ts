@@ -13,14 +13,14 @@ beforeAll(async () => {
     newsletter = new Newsletter(driver);
 }, 60000);
 
-test("Newsletter subscription test", async () => { 
+test("Newsletter subscription test", async () => {
     await newsletter.findFooter();
     await newsletter.inputemail();
     await newsletter.clickregistracijaButton();
-    
+
     await new Promise((resolve) => setTimeout(resolve, 5000));
 
-},50000);
+}, 50000);
 
 
 afterAll(async () => {

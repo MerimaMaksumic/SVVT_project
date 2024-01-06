@@ -21,7 +21,7 @@ test("Categories test", async () => {
     await category.findIzdavača();
     await category.compareizdavača();
     await new Promise((resolve) => setTimeout(resolve, 5000));
-},50000);
+}, 50000);
 
 
 afterAll(async () => {

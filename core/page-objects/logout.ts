@@ -19,62 +19,62 @@ try {
 
 
 export class LogoutPage extends BasePage {
-    constructor(driver: WebDriver) {
-        super(driver);
-    }
+  constructor(driver: WebDriver) {
+    super(driver);
+  }
 
-    private usericon = By.xpath('//div[@class="nav-item"]//a[@href="https://buybook.ba/moj-nalog"]');
+  private usericon = By.xpath('//div[@class="nav-item"]//a[@href="https://buybook.ba/moj-nalog"]');
 
-    async clickusericon(){
-      await this.findElementAndClickEnsuringVisible(this.usericon);
-    }
+  async clickusericon() {
+    await this.findElementAndClickEnsuringVisible(this.usericon);
+  }
 
-    private emailinput = By.id("email_1");
+  private emailinput = By.id("email_1");
 
-    async inputemail(){
-        await this.fillInputField(this.emailinput, testData.data.email);
-    }
+  async inputemail() {
+    await this.fillInputField(this.emailinput, testData.data.email);
+  }
 
-    private passwordinput = By.id("exampleInputPassword01");
+  private passwordinput = By.id("exampleInputPassword01");
 
-    async inputpassword(){
-        await this.fillInputField(this.passwordinput, testData.data.password);
-    }
+  async inputpassword() {
+    await this.fillInputField(this.passwordinput, testData.data.password);
+  }
 
-    private prijavabutton = By.xpath('//button[@class="btn btn-primary w-100"]');
+  private prijavabutton = By.xpath('//button[@class="btn btn-primary w-100"]');
 
-    async clickprijava(){
-        await this.findElementAndClickEnsuringVisible(this.prijavabutton);
-    }
+  async clickprijava() {
+    await this.findElementAndClickEnsuringVisible(this.prijavabutton);
+  }
 
-    private usericonagain = By.xpath('//div[@class="nav-item"]//a[@href="https://buybook.ba/moj-nalog"]');
+  private usericonagain = By.xpath('//div[@class="nav-item"]//a[@href="https://buybook.ba/moj-nalog"]');
 
-    async clickusericonagain(){
-      await this.findElementAndClickEnsuringVisible(this.usericonagain);
-    }
+  async clickusericonagain() {
+    await this.findElementAndClickEnsuringVisible(this.usericonagain);
+  }
 
-    private sidebar = By.xpath('//div[@class="col-lg-4 pb-4 pb-lg-0 col-xxl-3  pe-xxl-5"]');
+  private sidebar = By.xpath('//div[@class="col-lg-4 pb-4 pb-lg-0 col-xxl-3  pe-xxl-5"]');
 
-    async locatesidebar(){
-        await this.findElement(this.sidebar);
-    }
+  async locatesidebar() {
+    await this.findElement(this.sidebar);
+  }
 
-    private logoutbutton = By.xpath('//a[@href="logout.php"]');
+  private logoutbutton = By.xpath('//a[@href="logout.php"]');
 
-    async clicklogoutbutton(){
-      await this.findElementAndClickEnsuringVisible(this.logoutbutton);
-    }
+  async clicklogoutbutton() {
+    await this.findElementAndClickEnsuringVisible(this.logoutbutton);
+  }
 
-    private usericon2 = By.xpath('//div[@class="nav-item"]//a[@href="https://buybook.ba/moj-nalog"]');
+  private usericon2 = By.xpath('//div[@class="nav-item"]//a[@href="https://buybook.ba/moj-nalog"]');
 
-    async clickusericon2(){
-      await this.findElementAndClickEnsuringVisible(this.usericon2);
-    }
+  async clickusericon2() {
+    await this.findElementAndClickEnsuringVisible(this.usericon2);
+  }
 
-    private  prijavaheader = By.xpath('//div[@class="card-header bg-transparent py-3"]');
+  private prijavaheader = By.xpath('//div[@class="card-header bg-transparent py-3"]');
 
-    async compareprijavaheader(){
-        await this.checkMatchingElements(this.prijavaheader, testData.data.prijava);
-    }
-   
+  async compareprijavaheader() {
+    await this.checkMatchingElements(this.prijavaheader, testData.data.prijava);
+  }
+
 }

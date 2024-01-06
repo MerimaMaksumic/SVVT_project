@@ -8,14 +8,13 @@ let url = "https://buybook.ba/";
 let changeLanguage: ChangeLanguage;
 
 beforeAll(async () => {
-    driver = await new Builder().forBrowser("chrome").build();
-    await driver.get(url);
-    await driver.manage().window().maximize();
-    changeLanguage = new ChangeLanguage(driver);
-  }, 600000);
-  
-test("changelanguage: change language", async () => 
-{
+  driver = await new Builder().forBrowser("chrome").build();
+  await driver.get(url);
+  await driver.manage().window().maximize();
+  changeLanguage = new ChangeLanguage(driver);
+}, 600000);
+
+test("changelanguage: change language", async () => {
   await changeLanguage.clickFlagButton();
   await changeLanguage.clickChosenLanguage();
   await new Promise((resolve) => setTimeout(resolve, 5000));
@@ -23,12 +22,12 @@ test("changelanguage: change language", async () =>
   await new Promise((resolve) => setTimeout(resolve, 5000));
   await changeLanguage.comparechangelanguage();
   await new Promise((resolve) => setTimeout(resolve, 5000));
-}, 
-1000000);
-  
-  
-  afterAll(async () => {
-  
-    await driver.quit();
-  
-  }, 50000000);
+},
+  1000000);
+
+
+afterAll(async () => {
+
+  await driver.quit();
+
+}, 50000000);

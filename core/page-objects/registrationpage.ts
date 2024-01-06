@@ -20,50 +20,50 @@ export class RegistrationPage extends BasePage {
     private userBtn: By = By.xpath("//div [@class='nav-item']//*[@href='https://buybook.ba/moj-nalog']");
 
 
-    async clickUserButton(){
+    async clickUserButton() {
         await this.findElementAndClick(this.userBtn);
     }
 
     private registerBtn: By = By.xpath("//span [@class='text-muted'] //a[@href='https://buybook.ba/registracija']");
 
-    async clickRegisterButton(){
+    async clickRegisterButton() {
         await this.findElementAndClick(this.registerBtn);
     }
 
     private firstName: By = By.id("name_1");
 
-    async provideFirstName(){
+    async provideFirstName() {
         await this.fillInputField(this.firstName, testData.data.firstName);
     }
 
-  private email: By = By.xpath("//input [@placeholder='Vaša e-mail adresa']");
+    private email: By = By.xpath("//input [@placeholder='Vaša e-mail adresa']");
 
-  async provideEmail(){
+    async provideEmail() {
         await this.fillInputField(this.email, testData.data.email);
     }
 
     private phone: By = By.xpath("//input [@placeholder='Vaš broj telefona']");
-    async providePhone(){
+    async providePhone() {
         await this.fillInputField(this.phone, testData.data.phone);
     }
 
     private password: By = By.id("exampleInputPassword_01");
-    async providePassword(){
+    async providePassword() {
         await this.fillInputField(this.password, testData.data.password);
     }
 
     private repeatPassword: By = By.xpath("//input [@name='password2']");
-    async provideRepeatPassword(){
+    async provideRepeatPassword() {
         await this.fillInputField(this.repeatPassword, testData.data.password);
     }
 
     private checkBox: By = By.id("form2Example3");
-    async clickCheckBox(){
+    async clickCheckBox() {
         await this.findElementAndClick(this.checkBox);
     }
 
     private SumbitBtn: By = By.xpath("//button [@name='kayit']");
-    async clickSumbitBtn(){
+    async clickSumbitBtn() {
         await this.findElementAndClick(this.SumbitBtn);
     }
 }

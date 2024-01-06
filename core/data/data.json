@@ -15,7 +15,13 @@
         "language":"English",
         "cart": "Moja košara (1)",
         "insta": "ik_buybook",
-        "newPassword":"012345678"
+        "newPassword":"012345678",
+        "imeiprezime": "Elma Sarajlic",
+        "grad":"Konjic",
+        "okrug":"Orašje",
+        "adresa": "Parsovici bb",
+        "napomena":"nema napomene",
+        "zip": "88409"
     },
     "data2":{
        
@@ -24,11 +30,7 @@
         "password": "12345678"
    
     },
-    "credentials": {
-        "name": "Amila",
-        "last_name": "Causevic",
-        "password": "password123"
-    },
+   
     "verification_message": {
         "registartion_message": "Your account has been created."
     }

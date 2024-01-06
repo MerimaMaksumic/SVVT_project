@@ -4,7 +4,7 @@ import { Footer } from "../core/page-objects/footerhyperlinks";
 let driver;
 let url = "https://buybook.ba/";
 
-// Declare the variable
+
 let footer: Footer;
 
 beforeAll(async () => {
