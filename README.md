@@ -22,5 +22,7 @@ Website Link: [BuyBook](https://buybook.ba/)
 12. **Smoke Test**
 
 A link to a recording of the running tests: **https://drive.google.com/file/d/1D4uGZFyAFy90mHiIlgPbFSPduKbDQ00R/view?usp=sharing**
-Testing documwntation: **https://drive.google.com/file/d/1tvC2e3xvEuFpfaph4yGATr9leZ-XFTdm/view?usp=sharing**
+
+
+Testing documentation: **https://drive.google.com/file/d/1tvC2e3xvEuFpfaph4yGATr9leZ-XFTdm/view?usp=sharing**
 
