@@ -21,6 +21,7 @@ test("loginpage: user login", async () => {
   await loginPage.provideEmail();
   await loginPage.providePassword();
   await loginPage.clickSumbitBtn();
+  /*await new Promise((resolve) => setTimeout(resolve, 500000));*/
   await loginPage.clickUserButtonagain();
   await loginPage.verifyname();
   /*await new Promise((resolve) => setTimeout(resolve, 500000));*/

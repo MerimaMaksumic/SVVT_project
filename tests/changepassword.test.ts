@@ -38,6 +38,7 @@ test("change password test", async () => {
     await new Promise((resolve) => setTimeout(resolve, 5000));
 
     await changePassword.clickloginbutton2();
+    await changePassword.checkporuka(); //da li je succeess - ne bi trebao biti
     
 },
     500000);

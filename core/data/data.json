@@ -23,7 +23,10 @@
         "napomena":"test final",
         "zip": "88409",
         "verifyname": "Elma Sarajlić",
-        "order": "Narudžba dovršena"
+        "order": "Narudžba dovršena",
+        "porukafail": "Vaši podaci su netačni. Molimo pokušajte ponovo.!",
+        "porukasuccess":"Uspješno ste prijavljeni. Preusmjereni ste na početnu stranicu."
+
     },
     "data2":{
        

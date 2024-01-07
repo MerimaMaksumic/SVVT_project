@@ -106,5 +106,8 @@ export class ChangePassword extends BasePage {
     async clickloginbutton2() {
         await this.findElementAndClickEnsuringVisible(this.loginbutton2);
     }
-
+ private poruka= By.xpath('//div [@class="alert alert-danger"]')
+  async checkporuka(){
+    await this.checkMatchingElements(this.poruka, testData.data.porukasuccess) 
+  }
 }
