@@ -24,22 +24,21 @@ test("Footer Instagram Link Test", async () => {
     await driver.switchTo().window(handles[1]);
   }
 
-  await footer.checkinstaprofile();
-  await new Promise((resolve) => setTimeout(resolve, 50000));
+  await new Promise((resolve) => setTimeout(resolve,3000));
   await footer.checkinstaprofilematch();
-  await new Promise((resolve) => setTimeout(resolve, 50000));
+  await new Promise((resolve) => setTimeout(resolve, 2000));
 
 
-  // Optional: Close the new tab and switch back to the main window
+  //Close the new tab and switch back to the main window
   if (handles.length > 1) {
     await driver.close();
     await driver.switchTo().window(handles[0]);
-    await new Promise((resolve) => setTimeout(resolve, 50000));
+    await new Promise((resolve) => setTimeout(resolve, 5000));
 
   }
 
 
-}, 500000);
+}, 50000);
 
 
 afterAll(async () => {

@@ -26,6 +26,9 @@ test("registrationpage: user registration", async () => {
   await registrationPage.providePassword();
   await registrationPage.provideRepeatPassword();
   await registrationPage.clickCheckBox();
+  await new Promise((resolve) => setTimeout(resolve, 5000));
+  await registrationPage.clickCheckBox();
+  await new Promise((resolve) => setTimeout(resolve, 5000));
   await registrationPage.clickSumbitBtn();
 },
   1000000);

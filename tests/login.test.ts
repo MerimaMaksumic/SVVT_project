@@ -4,7 +4,7 @@ import { LoginPage } from "../core/page-objects/loginpage";
 let driver;
 let url = "https://buybook.ba/";
 
-// Declare the variable
+
 let loginPage: LoginPage;
 
 beforeAll(async () => {
@@ -22,6 +22,7 @@ test("loginpage: user login", async () => {
   await loginPage.providePassword();
   await loginPage.clickSumbitBtn();
   await loginPage.clickUserButtonagain();
+  await loginPage.verifyname();
   /*await new Promise((resolve) => setTimeout(resolve, 500000));*/
 },
   1000000);

@@ -4,7 +4,7 @@ import { DeleteProduct } from "../core/page-objects/deletefromcart";
 let driver;
 let url = "https://buybook.ba/";
 
-// Declare the variable
+
 let deleteProduct: DeleteProduct;
 
 beforeAll(async () => {

@@ -4,7 +4,7 @@ import { readFileSync } from "fs";
 import * as path from "path";
 
 let basePage: BasePage;
-let testData: any; // Change the type based on the structure of your JSON data
+let testData: any; 
 
 const dataFilePath = path.resolve(__dirname, "../data/data.json");
 
@@ -13,9 +13,7 @@ try {
     testData = JSON.parse(jsonData);
 } catch (error) {
     console.error('Error parsing JSON:', error);
-    // Handle the error gracefully, log it, or throw it further.
 }
-
 
 
 export class LoginPage extends BasePage {
@@ -53,6 +51,11 @@ export class LoginPage extends BasePage {
 
     async clickUserButtonagain() {
         await this.findElementAndClick(this.userBtnagain);
+    }
+
+    private namefield: By=By.xpath('/html/body/main/div/div/form/div/div[1]/div/div[1]/div/center/h6');
+    async verifyname(){
+        await this.checkMatchingElements(this.namefield, testData.data.verifyname);
     }
 
 }

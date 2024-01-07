@@ -4,7 +4,7 @@ import { readFileSync } from "fs";
 import * as path from "path";
 
 let basePage: BasePage;
-let testData: any; // Change the type based on the structure of your JSON data
+let testData: any; 
 
 const dataFilePath = path.resolve(__dirname, "../data/data.json");
 
@@ -13,7 +13,6 @@ try {
   testData = JSON.parse(jsonData);
 } catch (error) {
   console.error('Error parsing JSON:', error);
-  // Handle the error gracefully, log it, or throw it further.
 }
 
 
@@ -41,6 +40,6 @@ export class Footer extends BasePage {
   }
 
   async checkinstaprofilematch() {
-    await this.checkMatchingElements(this.instaopenprofile, testData.data.insta)
+   await this.checkMatchingElements(this.instaopenprofile, testData.data.insta)
   }
 }

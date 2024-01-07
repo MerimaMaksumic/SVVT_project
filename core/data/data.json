@@ -15,13 +15,15 @@
         "language":"English",
         "cart": "Moja košara (1)",
         "insta": "ik_buybook",
-        "newPassword":"012345678",
+        "newPassword":"01234567",
         "imeiprezime": "Elma Sarajlic",
         "grad":"Konjic",
         "okrug":"Orašje",
-        "adresa": "Parsovici bb",
-        "napomena":"nema napomene",
-        "zip": "88409"
+        "adresa": "Azize Secirbegovic bb",
+        "napomena":"test final",
+        "zip": "88409",
+        "verifyname": "Elma Sarajlić",
+        "order": "Narudžba dovršena"
     },
     "data2":{
        

@@ -117,5 +117,11 @@ export class Smoke extends BasePage {
         await this.findElementAndClickEnsuringVisible(this.finalizirajnarudzbubutton);
     }
 
+    private verifyOrder: By=By.xpath("/html/body/main/div/div/div/div/div/div[1]/h3");
 
+
+    async VerifyOrder(){
+        await this.checkMatchingElements(this.verifyOrder, testData.data.order)
+
+    }
 }

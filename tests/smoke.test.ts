@@ -37,7 +37,10 @@ test("Smoke test", async () => {
     await new Promise((resolve) => setTimeout(resolve, 5000));
 
 
-    //await smoke.clickfinalizirajnarudzbubutton(); 
+    await smoke.clickfinalizirajnarudzbubutton(); 
+    await new Promise((resolve) => setTimeout(resolve, 5000));
+    await smoke.VerifyOrder();
+    await new Promise((resolve) => setTimeout(resolve, 5000));
 
 
 }, 500000);

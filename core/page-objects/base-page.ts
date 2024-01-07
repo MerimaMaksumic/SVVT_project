@@ -63,4 +63,9 @@ export default class BasePage {
         await this.driver.executeScript("arguments[0].scrollIntoView(true);", element);
     }
 
+    
+	async retrieveText(selector: By) {
+		const element = await this.findElement(selector);
+		return await element.getText();
+	}
 }

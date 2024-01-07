@@ -4,7 +4,7 @@ import { AddProduct } from "../core/page-objects/addproducttocart";
 let driver;
 let url = "https://buybook.ba/";
 
-// Declare the variable
+
 let addProduct: AddProduct;
 
 beforeAll(async () => {
@@ -15,19 +15,27 @@ beforeAll(async () => {
 
 test("addtocart: add product to cart", async () => {
   await driver.navigate().to(url);
-  await driver.manage().setTimeouts({ implicit: 15000000 });
-  addProduct = new AddProduct(driver); // Instantiate the RegistrationPage object
-  // timeout 
+  await driver.manage().setTimeouts({ implicit: 1500000 });
+  addProduct = new AddProduct(driver);
+   
   await new Promise((resolve) => setTimeout(resolve, 5000));
   await addProduct.clickProduct();
+  await addProduct.getProductName();
+
+   await new Promise((resolve) => setTimeout(resolve, 5000));
   await addProduct.addtoCartButton();
-  //timeout
-  await new Promise((resolve) => setTimeout(resolve, 50000));
+  
+   await new Promise((resolve) => setTimeout(resolve, 5000));
   await addProduct.clickCartBtn(driver);
-  await new Promise((resolve) => setTimeout(resolve, 50000));
+
+  await new Promise((resolve) => setTimeout(resolve, 5000));
+  
+  await new Promise((resolve) => setTimeout(resolve, 5000));
+  await addProduct.checkproductCartName();
+ 
 
 },
-  1000000);
+  500000);
 
 
 afterAll(async () => {

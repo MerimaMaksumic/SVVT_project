@@ -18,6 +18,9 @@ export class AddProduct extends BasePage {
     }
 
 
+    private productName;
+    private pathNameCart: By= By.xpath ('/html/body/div[3]/div/div/div[2]/ul/li/div/div[2]/p/a')
+    private productTitlepath: By=By.xpath('/html/body/main/section[1]/div/div/div[2]/div/div[2]/div[1]/h4')
     private productBtn: By = By.xpath('//a [@class="slick-slide slick-current slick-active"]//div[@class="productCustomCard d-flex flex-wrap align-items-center justify-content-center px-1"]');
 
 
@@ -25,10 +28,15 @@ export class AddProduct extends BasePage {
         await this.findElementAndClickEnsuringVisible(this.productBtn);
     }
 
+    async getProductName(){
+        this.productName= await this.retrieveText (this.productTitlepath)
+    }
+
+ 
     private addtocartBtn: By = By.xpath("//div [@class='cart-button col-12 d-flex justify-content-start align-items-center gap-2']");
 
     async addtoCartButton() {
-        await this.findElementAndClickEnsuringVisible(this.addtocartBtn);
+        await this.findElementAndClick(this.addtocartBtn);
     }
 
 
@@ -38,9 +46,14 @@ export class AddProduct extends BasePage {
         await driver.executeScript("arguments[0].scrollIntoView(true);", element);
         await driver.wait(until.elementIsEnabled(element), 10000);
 
-        // Using JavaScript to perform the click
+        // Using JS to perform the click
         await driver.executeScript("arguments[0].click();", element);
     }
+    
+    async checkproductCartName(){
 
+        await this.checkMatchingElements(this.pathNameCart, this.productName)
+        
+    }
 
 }

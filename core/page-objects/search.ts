@@ -18,21 +18,27 @@ export class Search extends BasePage {
         await this.findElementAndClick(this.searchBtn);
     }
 
-    //NAUCITI KAKO IDE ENTER NAKON UNOSENJA TEKSTA
+
     async provideFirstSearchAndPressEnter() {
         try {
             await this.fillInputField(this.firstSearch, testData.data.firstSearch);
             const inputElement = await this.driver.findElement(this.firstSearch);
             await inputElement.sendKeys(Key.ENTER);
             console.log("Filled input field and pressed Enter.");
-            return true; // Indicate success if needed
+            return true; 
         } catch (error) {
             console.error('Error providing first search and pressing Enter:', error);
-            return false; // Indicate failure if needed
+            return false; 
         }
     }
 
     async clickSearchButton2() {
         await this.findElementAndClick(this.searchBtn);
+    }
+
+    private pathtoAutor: By=By.xpath("/html/body/main/section/div/div/div/a[3]/div/div[2]/p[2]");
+
+    async verifyAutor(){
+        await this.checkMatchingElements(this.pathtoAutor, testData.data.firstSearch)
     }
 }
